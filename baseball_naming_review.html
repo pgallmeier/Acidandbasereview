@@ -1,0 +1,1321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Acids &amp; Bases Naming Review - COCISD Chemistry</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --sky:#0a1628;--field:#2d5a1b;--dirt:#8B5E3C;--base:#f0e0a0;
+  --g9:#052B1E;--g8:#074D35;--g7:#0A6B48;--g6:#1D9E75;--g5:#2DC98E;
+  --g2:#C8F5E6;--g1:#EBF9F4;
+  --coral:#C94030;--coral-pale:#FFF0EE;
+  --amber:#C97B10;--amber-pale:#FFF8ED;
+  --blue:#1A5FAA;--blue-pale:#EEF5FF;
+  --purple:#5B4AB7;--purple-pale:#EEEDFE;
+  --ink:#0A1F14;--muted:#3D6050;--ghost:#A8C4B8;
+  --card:#fff;--bg:#F2FBF6;
+  --r:12px;--r-sm:8px;
+  --sh:0 2px 14px rgba(5,43,30,.10);
+}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--ink);min-height:100vh;}
+
+/* NAV */
+.nav{background:var(--g9);height:54px;display:flex;align-items:center;justify-content:space-between;padding:0 24px;position:sticky;top:0;z-index:100;box-shadow:0 2px 12px rgba(0,0,0,.3);}
+.nav-logo{font-size:17px;font-weight:800;color:var(--g2);}
+.nav-tabs{display:flex;gap:4px;}
+.nav-tab{padding:6px 18px;border-radius:20px;border:none;cursor:pointer;font-size:13px;font-weight:700;color:var(--g2);background:transparent;font-family:inherit;transition:all .18s;}
+.nav-tab:hover{background:rgba(255,255,255,.1);}
+.nav-tab.active{background:var(--g6);color:#fff;}
+
+/* SCREENS */
+.screen{display:none;}
+.screen.active{display:block;animation:fi .25s ease;}
+@keyframes fi{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:none;}}
+
+/* ===== REVIEW SCREEN ===== */
+.review{max-width:860px;margin:0 auto;padding:36px 20px 80px;}
+.rev-hero{text-align:center;margin-bottom:36px;}
+.rev-hero h1{font-size:clamp(28px,5vw,42px);font-weight:900;color:var(--g9);margin-bottom:8px;}
+.rev-hero p{font-size:15px;color:var(--muted);max-width:520px;margin:0 auto;}
+
+/* Accordion */
+.acc-item{background:var(--card);border-radius:var(--r);margin-bottom:12px;box-shadow:var(--sh);overflow:hidden;}
+.acc-head{
+  display:flex;align-items:center;gap:14px;padding:18px 22px;cursor:pointer;
+  border-bottom:2px solid transparent;transition:border-color .2s;
+  user-select:none;
+}
+.acc-head:hover{background:#f8fffe;}
+.acc-head.open{border-color:var(--g4);}
+.acc-emoji{font-size:22px;}
+.acc-title{font-size:16px;font-weight:800;color:var(--g9);flex:1;}
+.acc-subtitle{font-size:12px;color:var(--muted);}
+.acc-chevron{font-size:14px;color:var(--ghost);transition:transform .25s;}
+.acc-head.open .acc-chevron{transform:rotate(180deg);}
+.acc-body{display:none;padding:0 22px 22px;}
+.acc-head.open + .acc-body{display:block;animation:fi .2s ease;}
+
+/* Rule strip */
+.rule-strip{background:var(--g9);border-radius:var(--r-sm);padding:16px 20px;margin:16px 0;display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+.chip{padding:5px 13px;border-radius:20px;font-size:13px;font-weight:800;}
+.ch-g{background:var(--g6);color:#fff;}
+.ch-a{background:var(--amber);color:#fff;}
+.ch-w{background:rgba(255,255,255,.15);color:#fff;}
+.ch-d{background:rgba(255,255,255,.08);color:rgba(255,255,255,.6);}
+.plus{color:rgba(255,255,255,.3);font-weight:700;}
+
+/* Two col */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0;}
+.rule-card{border-radius:var(--r-sm);padding:14px 16px;}
+.rc-yes{background:var(--g1);border:1.5px solid var(--g2);}
+.rc-no{background:var(--coral-pale);border:1.5px solid #f0c0b8;}
+.rc-blue{background:var(--blue-pale);border:1.5px solid #b0c8e8;}
+.rc-purple{background:var(--purple-pale);border:1.5px solid #c0b8e8;}
+.rc-lbl{font-size:11px;font-weight:800;letter-spacing:1px;text-transform:uppercase;margin-bottom:6px;}
+.rl-g{color:var(--g7);}
+.rl-r{color:var(--coral);}
+.rl-b{color:var(--blue);}
+.rl-p{color:var(--purple);}
+.rc-val{font-size:14px;font-weight:800;color:var(--ink);}
+.rc-sub{font-size:12px;color:var(--muted);margin-top:4px;line-height:1.45;}
+
+/* Examples table */
+.ex-table{width:100%;border-collapse:collapse;margin:14px 0;font-size:13px;}
+.ex-table th{background:var(--g9);color:var(--g2);padding:8px 12px;text-align:left;font-size:11px;font-weight:800;letter-spacing:.8px;text-transform:uppercase;}
+.ex-table td{padding:9px 12px;border-bottom:1px solid var(--g1);}
+.ex-table tr:last-child td{border:none;}
+.ex-table tr:nth-child(even) td{background:var(--g1);}
+.mono{font-family:'Courier New',monospace;font-weight:700;color:var(--coral);}
+.ans{font-weight:700;color:var(--g7);}
+.hint-cell{color:var(--muted);font-size:12px;}
+
+/* Ref card */
+.ref-card{background:var(--g9);border-radius:var(--r-sm);padding:16px 20px;margin:16px 0;}
+.ref-title{color:var(--g2);font-size:11px;font-weight:800;letter-spacing:1px;text-transform:uppercase;margin-bottom:10px;}
+.ref-row{display:flex;align-items:center;gap:8px;margin-bottom:6px;font-size:13px;flex-wrap:wrap;}
+.ref-row:last-child{margin-bottom:0;}
+
+/* Play button */
+.play-cta{text-align:center;margin-top:36px;}
+.play-btn{display:inline-flex;align-items:center;gap:10px;padding:14px 36px;background:var(--coral);color:#fff;border:none;border-radius:var(--r-sm);font-size:16px;font-weight:800;cursor:pointer;font-family:inherit;transition:all .2s;box-shadow:0 4px 16px rgba(201,64,48,.35);}
+.play-btn:hover{background:#E05545;transform:translateY(-2px);box-shadow:0 8px 24px rgba(201,64,48,.4);}
+
+/* ===== GAME SCREEN ===== */
+.game-wrap{max-width:900px;margin:0 auto;padding:20px 20px 60px;}
+
+/* Scoreboard */
+.scoreboard{
+  background:var(--g9);border-radius:var(--r);
+  padding:16px 24px;margin-bottom:16px;
+  display:flex;align-items:center;justify-content:space-between;gap:12px;
+  flex-wrap:wrap;
+}
+.sb-section{text-align:center;}
+.sb-label{font-size:9px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--g2);margin-bottom:4px;}
+.sb-value{font-family:'Courier New',monospace;font-size:24px;font-weight:700;color:#fff;}
+.sb-value.big{font-size:32px;color:#FFDF60;}
+.sb-value.red{color:#ff8070;}
+.sb-value.green{color:var(--g4);}
+
+.inning-dots{display:flex;gap:6px;align-items:center;}
+.i-dot{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.2);}
+.i-dot.done{background:var(--g4);}
+.i-dot.current{background:#FFDF60;box-shadow:0 0 6px #FFDF60;}
+
+.count-row{display:flex;gap:16px;align-items:center;}
+.count-item{text-align:center;}
+.count-label{font-size:9px;letter-spacing:1px;text-transform:uppercase;color:var(--g2);display:block;}
+.strike-dots,.out-dots{display:flex;gap:4px;margin-top:3px;}
+.s-dot{width:12px;height:12px;border-radius:50%;border:1.5px solid rgba(255,255,255,.3);}
+.s-dot.filled{background:#FFDF60;border-color:#FFDF60;}
+.o-dot{width:12px;height:12px;border-radius:50%;border:1.5px solid rgba(255,255,255,.3);}
+.o-dot.filled{background:var(--coral);border-color:var(--coral);}
+
+/* Canvas */
+.field-wrap{position:relative;border-radius:var(--r);overflow:hidden;background:var(--sky);margin-bottom:16px;}
+#fieldCanvas{display:block;width:100%;height:auto;}
+
+/* Question panel */
+.q-panel{background:var(--card);border-radius:var(--r);padding:22px 24px;box-shadow:var(--sh);margin-bottom:14px;position:relative;overflow:hidden;}
+.q-panel::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--g6),var(--coral));}
+.q-status{font-size:11px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin-bottom:6px;}
+.q-prompt{font-size:13px;color:var(--muted);margin-bottom:4px;}
+.q-given{font-family:'Courier New',monospace;font-size:clamp(22px,4vw,34px);font-weight:700;color:var(--coral);margin-bottom:4px;}
+.q-dir{font-size:13px;color:var(--muted);font-style:italic;margin-bottom:16px;}
+
+.hint-row{display:flex;gap:8px;margin-bottom:14px;}
+.hint-toggle{padding:5px 14px;border-radius:20px;border:1.5px solid var(--amber);background:none;font-size:12px;font-weight:700;color:var(--amber);cursor:pointer;font-family:inherit;transition:background .18s;}
+.hint-toggle:hover{background:var(--amber-pale);}
+.hint-text{display:none;background:var(--amber-pale);border:1px solid #e8c56d;border-radius:var(--r-sm);padding:8px 12px;font-size:12px;color:#5a3a00;flex:1;}
+.hint-text.open{display:block;}
+
+/* Timer bar */
+.timer-bar-outer{height:6px;background:#eee;border-radius:3px;margin-bottom:14px;overflow:hidden;}
+.timer-bar-fill{height:100%;border-radius:3px;transition:width 1s linear,background .3s;background:var(--g5);}
+
+.ans-row{display:flex;gap:10px;}
+.ans-input{
+  flex:1;padding:13px 16px;border:2.5px solid var(--g2);border-radius:var(--r-sm);
+  font-size:17px;color:var(--ink);outline:none;font-family:inherit;transition:all .2s;
+}
+.ans-input:focus{border-color:var(--g5);box-shadow:0 0 0 3px rgba(45,201,142,.12);}
+.ans-input.ok{border-color:var(--g5);background:var(--g1);}
+.ans-input.bad{border-color:var(--coral);background:var(--coral-pale);}
+.ans-input:disabled{opacity:.6;}
+.swing-btn{
+  padding:13px 24px;background:var(--coral);color:#fff;border:none;border-radius:var(--r-sm);
+  font-size:15px;font-weight:800;cursor:pointer;font-family:inherit;transition:all .18s;
+  white-space:nowrap;
+}
+.swing-btn:hover:not(:disabled){background:#E05545;transform:scale(1.02);}
+.swing-btn:disabled{background:#ccc;cursor:not-allowed;}
+.swing-btn.next-pitch{background:var(--g6);}
+.swing-btn.next-pitch:hover{background:var(--g7);}
+
+/* Feedback */
+.fb-box{border-radius:var(--r-sm);padding:12px 16px;margin-top:12px;font-size:14px;display:none;}
+.fb-box.show{display:block;}
+.fb-box.ok{background:var(--g1);border:1.5px solid var(--g2);color:var(--g7);}
+.fb-box.bad{background:var(--coral-pale);border:1.5px solid #f0c0b8;color:var(--coral);}
+.fb-ans{font-family:'Courier New',monospace;font-weight:700;font-size:15px;}
+
+/* Game over */
+.game-over{background:var(--g9);border-radius:var(--r);padding:40px 30px;text-align:center;margin-top:16px;display:none;}
+.go-icon{font-size:64px;display:block;margin-bottom:14px;animation:pop .5s ease;}
+@keyframes pop{from{transform:scale(0);}60%{transform:scale(1.1);}to{transform:scale(1);}}
+.go-title{font-size:32px;font-weight:900;color:#fff;margin-bottom:8px;}
+.go-sub{font-size:15px;color:var(--g2);margin-bottom:24px;}
+.go-stats{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin-bottom:28px;}
+.go-stat{background:rgba(255,255,255,.08);border-radius:var(--r-sm);padding:14px 22px;text-align:center;}
+.go-stat-v{font-family:'Courier New',monospace;font-size:26px;font-weight:700;color:#FFDF60;display:block;}
+.go-stat-l{font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--g2);}
+.go-btn{display:inline-block;padding:14px 36px;background:var(--coral);color:#fff;border:none;border-radius:var(--r-sm);font-size:15px;font-weight:800;cursor:pointer;font-family:inherit;transition:all .2s;margin:6px;}
+.go-btn:hover{background:#E05545;}
+.go-btn.sec{background:rgba(255,255,255,.12);color:#fff;}
+.go-btn.sec:hover{background:rgba(255,255,255,.2);}
+.missed-wrap{text-align:left;max-width:500px;margin:0 auto 24px;}
+.missed-title{font-size:11px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--g2);margin-bottom:10px;}
+.mi{display:flex;justify-content:space-between;align-items:center;padding:8px 12px;background:rgba(255,255,255,.06);border-radius:6px;margin-bottom:5px;font-size:13px;}
+.mi-g{font-family:'Courier New',monospace;color:#ff9080;font-weight:700;}
+.mi-a{color:var(--g4);font-weight:700;}
+
+@media(max-width:550px){
+  .two,.go-stats{grid-template-columns:1fr;flex-direction:column;}
+  .scoreboard{gap:8px;}
+  .game-wrap,.review{padding:14px 12px 60px;}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-logo">&#9879; Acids &amp; Bases Naming Review</div>
+  <div class="nav-tabs">
+    <button class="nav-tab active" id="tab-review" onclick="go('review')">&#128214; Review</button>
+    <button class="nav-tab" id="tab-game" onclick="go('game')">&#9918; Play Ball</button>
+  </div>
+</nav>
+
+<!-- ============================= REVIEW SCREEN ============================= -->
+<div class="screen active" id="s-review">
+<div class="review">
+  <div class="rev-hero">
+    <h1>Naming Acids &amp; Bases</h1>
+    <p>Click any section to review the rules. Cover each one before heading to the game.</p>
+  </div>
+
+  <!-- 1. Binary Acids -->
+  <div class="acc-item">
+    <div class="acc-head" onclick="toggleAcc(this)">
+      <span class="acc-emoji">&#129786;</span>
+      <div><div class="acc-title">Binary Acids &mdash; Formula to Name</div><div class="acc-subtitle">HCl, HBr, HF, HI, H&#8322;S &mdash; no oxygen present</div></div>
+      <span class="acc-chevron">&#9660;</span>
+    </div>
+    <div class="acc-body">
+      <p style="font-size:14px;color:var(--muted);margin-bottom:14px;">A binary acid contains <strong>H + one nonmetal</strong> and no oxygen. Always written (aq) to show it is dissolved in water.</p>
+      <div class="rule-strip">
+        <span class="chip ch-g">hydro</span><span class="plus">+</span>
+        <span class="chip ch-a">[root of nonmetal]</span><span class="plus">+</span>
+        <span class="chip ch-g">ic</span><span class="plus">+</span>
+        <span class="chip ch-w">acid</span>
+      </div>
+      <table class="ex-table">
+        <tr><th>Formula</th><th>Nonmetal / Root</th><th>Name</th><th>Memory hint</th></tr>
+        <tr><td class="mono">HF(aq)</td><td>fluorine / fluor</td><td class="ans">hydrofluoric acid</td><td class="hint-cell">hydro+fluor+ic+acid</td></tr>
+        <tr><td class="mono">HCl(aq)</td><td>chlorine / chlor</td><td class="ans">hydrochloric acid</td><td class="hint-cell">hydro+chlor+ic+acid</td></tr>
+        <tr><td class="mono">HBr(aq)</td><td>bromine / brom</td><td class="ans">hydrobromic acid</td><td class="hint-cell">hydro+brom+ic+acid</td></tr>
+        <tr><td class="mono">HI(aq)</td><td>iodine / iod</td><td class="ans">hydroiodic acid</td><td class="hint-cell">hydro+iod+ic+acid</td></tr>
+        <tr><td class="mono">H&#8322;S(aq)</td><td>sulfur / sulfur</td><td class="ans">hydrosulfuric acid</td><td class="hint-cell">H&#8322; because S has charge 2&#8722;</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- 2. Binary Name to Formula -->
+  <div class="acc-item">
+    <div class="acc-head" onclick="toggleAcc(this)">
+      <span class="acc-emoji">&#128257;</span>
+      <div><div class="acc-title">Binary Acids &mdash; Name to Formula</div><div class="acc-subtitle">Reverse the process: strip the name, find the element</div></div>
+      <span class="acc-chevron">&#9660;</span>
+    </div>
+    <div class="acc-body">
+      <p style="font-size:14px;color:var(--muted);margin-bottom:14px;">If the name starts with <strong>&ldquo;hydro-&rdquo;</strong> it is a binary acid. Reverse the three pieces to find the element, then write the formula.</p>
+      <div class="rule-strip" style="flex-direction:column;align-items:flex-start;gap:10px;">
+        <span style="color:rgba(255,255,255,.5);font-size:13px;">Example: <strong style="color:var(--g4);">hydrobromic acid</strong></span>
+        <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+          <span class="chip" style="background:rgba(201,64,48,.4);color:#ffb0a8;">1. Remove &ldquo;hydro-&rdquo;</span>
+          <span class="plus">&rarr;</span><span class="chip ch-d">bromic acid</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+          <span class="chip" style="background:rgba(201,120,16,.35);color:#ffd070;">2. Remove &ldquo;-ic acid&rdquo;</span>
+          <span class="plus">&rarr;</span><span class="chip ch-d">brom &rarr; bromine &rarr; Br</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+          <span class="chip ch-g">3. Write H + symbol</span>
+          <span class="plus">&rarr;</span><span class="chip ch-g">HBr &#10003;</span>
+        </div>
+      </div>
+      <div style="background:rgba(255,255,255,.06);border-radius:var(--r-sm);padding:10px 14px;margin-top:10px;font-size:13px;color:rgba(255,255,255,.7);">
+        <strong style="color:#FFDF60;">Watch out:</strong> H&#8322;S = hydrosulfuric acid. Sulfur has charge 2&#8722;, so you need <em>two</em> hydrogens. Always check the anion charge.
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Oxyacids F->N -->
+  <div class="acc-item">
+    <div class="acc-head" onclick="toggleAcc(this)">
+      <span class="acc-emoji">&#128293;</span>
+      <div><div class="acc-title">Oxyacids &mdash; Formula to Name</div><div class="acc-subtitle">Contains oxygen: HNO&#8323;, H&#8322;SO&#8324;, HClO&#8324;, etc.</div></div>
+      <span class="acc-chevron">&#9660;</span>
+    </div>
+    <div class="acc-body">
+      <p style="font-size:14px;color:var(--muted);margin-bottom:14px;">If the formula contains oxygen, it is an oxyacid. The <strong>polyatomic ion ending</strong> tells you the acid name ending.</p>
+      <div class="two">
+        <div class="rule-card rc-yes"><div class="rc-lbl rl-g">Anion ends in -ATE</div><div class="rc-val">&rarr; Acid ends in <strong>-IC ACID</strong></div><div class="rc-sub">sulfate &rarr; sulfuric acid</div></div>
+        <div class="rule-card rc-no"><div class="rc-lbl rl-r">Anion ends in -ITE</div><div class="rc-val">&rarr; Acid ends in <strong>-OUS ACID</strong></div><div class="rc-sub">sulfite &rarr; sulfurous acid</div></div>
+      </div>
+      <div class="ref-card">
+        <div class="ref-title">Special Prefixes &mdash; Keep Them!</div>
+        <div style="color:rgba(255,255,255,.8);font-size:13px;line-height:1.85;">
+          <strong style="color:var(--g4);">per-</strong>&hellip;ate &rarr; <strong style="color:var(--g4);">per-</strong>&hellip;ic acid &nbsp;&nbsp;|&nbsp;&nbsp; HClO&#8324; = <strong style="color:var(--g4);">per</strong>chloric acid<br>
+          <strong style="color:#FFDF60;">hypo-</strong>&hellip;ite &rarr; <strong style="color:#FFDF60;">hypo-</strong>&hellip;ous acid &nbsp;|&nbsp;&nbsp; HClO = <strong style="color:#FFDF60;">hypo</strong>chlorous acid
+        </div>
+      </div>
+      <table class="ex-table">
+        <tr><th>Formula</th><th>Anion</th><th>Name</th></tr>
+        <tr><td class="mono">HNO&#8323;</td><td>nitrate (-ate)</td><td class="ans">nitric acid</td></tr>
+        <tr><td class="mono">HNO&#8322;</td><td>nitrite (-ite)</td><td class="ans">nitrous acid</td></tr>
+        <tr><td class="mono">H&#8322;SO&#8324;</td><td>sulfate (-ate)</td><td class="ans">sulfuric acid</td></tr>
+        <tr><td class="mono">H&#8322;SO&#8323;</td><td>sulfite (-ite)</td><td class="ans">sulfurous acid</td></tr>
+        <tr><td class="mono">H&#8323;PO&#8324;</td><td>phosphate (-ate)</td><td class="ans">phosphoric acid</td></tr>
+        <tr><td class="mono">HClO&#8324;</td><td>perchlorate (per-+-ate)</td><td class="ans">perchloric acid</td></tr>
+        <tr><td class="mono">HClO</td><td>hypochlorite (hypo-+-ite)</td><td class="ans">hypochlorous acid</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- 4. Oxyacids N->F -->
+  <div class="acc-item">
+    <div class="acc-head" onclick="toggleAcc(this)">
+      <span class="acc-emoji">&#9889;</span>
+      <div><div class="acc-title">Oxyacids &mdash; Name to Formula</div><div class="acc-subtitle">Read the ending, find the anion, balance with H+</div></div>
+      <span class="acc-chevron">&#9660;</span>
+    </div>
+    <div class="acc-body">
+      <p style="font-size:14px;color:var(--muted);margin-bottom:14px;">No &ldquo;hydro-&rdquo; means oxyacid. The name ending tells you the anion. Then add enough H+ to balance the charge.</p>
+      <div class="two">
+        <div class="rule-card rc-yes"><div class="rc-lbl rl-g">Name ends in -IC ACID</div><div class="rc-val">&rarr; anion is <strong>-ATE</strong></div><div class="rc-sub">Find -ate ion, add H+ equal to its charge</div></div>
+        <div class="rule-card rc-no"><div class="rc-lbl rl-r">Name ends in -OUS ACID</div><div class="rc-val">&rarr; anion is <strong>-ITE</strong></div><div class="rc-sub">Find -ite ion, add H+ equal to its charge</div></div>
+      </div>
+      <div class="ref-card">
+        <div class="ref-title">Ion Charge Reference &mdash; Tells You How Many H+ to Add</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;font-size:13px;">
+          <div style="color:rgba(255,255,255,.7);">NO&#8323;&#8315; / NO&#8322;&#8315; &rarr; <strong style="color:var(--g4);">1&#8722; &rarr; 1 H</strong></div>
+          <div style="color:rgba(255,255,255,.7);">SO&#8324;&#178;&#8315; / SO&#8323;&#178;&#8315; &rarr; <strong style="color:var(--g4);">2&#8722; &rarr; 2 H</strong></div>
+          <div style="color:rgba(255,255,255,.7);">PO&#8324;&#179;&#8315; &rarr; <strong style="color:var(--g4);">3&#8722; &rarr; 3 H</strong></div>
+          <div style="color:rgba(255,255,255,.7);">ClO&#8324;&#8315;, ClO&#8323;&#8315;, ClO&#8322;&#8315;, ClO&#8315; &rarr; <strong style="color:var(--g4);">1&#8722; &rarr; 1 H</strong></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. Bases F->N -->
+  <div class="acc-item">
+    <div class="acc-head" onclick="toggleAcc(this)">
+      <span class="acc-emoji">&#128167;</span>
+      <div><div class="acc-title">Bases &mdash; Formula to Name</div><div class="acc-subtitle">NaOH, Fe(OH)&#8323;, NH&#8323; &mdash; fixed-charge and transition metals</div></div>
+      <span class="acc-chevron">&#9660;</span>
+    </div>
+    <div class="acc-body">
+      <p style="font-size:14px;color:var(--muted);margin-bottom:14px;">Most bases are ionic hydroxides. The key question: is it a <strong>fixed-charge metal</strong> (Groups 1, 2, Al, Zn) or a <strong>transition metal</strong> that needs a Roman numeral?</p>
+      <div class="two">
+        <div class="rule-card rc-blue">
+          <div class="rc-lbl rl-b">Fixed-Charge (Groups 1, 2, Al, Zn)</div>
+          <div class="rc-val">metal name + hydroxide</div>
+          <div class="rc-sub">No Roman numeral needed. Count OH&#8315; to confirm.<br>NaOH &rarr; sodium hydroxide<br>Ca(OH)&#8322; &rarr; calcium hydroxide</div>
+        </div>
+        <div class="rule-card rc-purple">
+          <div class="rc-lbl rl-p">Transition Metal (Fe, Cu, Cr, Co...)</div>
+          <div class="rc-val">metal + (Roman numeral) + hydroxide</div>
+          <div class="rc-sub">Count the OH&#8315; groups = metal charge = Roman numeral.<br>Fe(OH)&#8322; &rarr; iron(II) hydroxide<br>Fe(OH)&#8323; &rarr; iron(III) hydroxide</div>
+        </div>
+      </div>
+      <table class="ex-table">
+        <tr><th>Formula</th><th>Type</th><th>Name</th></tr>
+        <tr><td class="mono">NaOH</td><td>Group 1, fixed 1+</td><td class="ans">sodium hydroxide</td></tr>
+        <tr><td class="mono">Ca(OH)&#8322;</td><td>Group 2, fixed 2+</td><td class="ans">calcium hydroxide</td></tr>
+        <tr><td class="mono">Al(OH)&#8323;</td><td>fixed 3+</td><td class="ans">aluminum hydroxide</td></tr>
+        <tr><td class="mono">Fe(OH)&#8322;</td><td>transition, 2 OH&#8315;</td><td class="ans">iron(II) hydroxide</td></tr>
+        <tr><td class="mono">Fe(OH)&#8323;</td><td>transition, 3 OH&#8315;</td><td class="ans">iron(III) hydroxide</td></tr>
+        <tr><td class="mono">Cu(OH)&#8322;</td><td>transition, 2 OH&#8315;</td><td class="ans">copper(II) hydroxide</td></tr>
+        <tr><td class="mono">NH&#8323;</td><td>special case</td><td class="ans">ammonia</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- 6. Bases N->F -->
+  <div class="acc-item">
+    <div class="acc-head" onclick="toggleAcc(this)">
+      <span class="acc-emoji">&#128260;</span>
+      <div><div class="acc-title">Bases &mdash; Name to Formula</div><div class="acc-subtitle">Read the Roman numeral, find the charge, write OH&#8315; groups</div></div>
+      <span class="acc-chevron">&#9660;</span>
+    </div>
+    <div class="acc-body">
+      <p style="font-size:14px;color:var(--muted);margin-bottom:14px;">Check for a Roman numeral. If present, that is the metal charge. Add that many OH&#8315; groups. If no Roman numeral, use the fixed charge for that metal.</p>
+      <div class="ref-card">
+        <div class="ref-title">Fixed Charge Reference</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;font-size:13px;color:rgba(255,255,255,.75);">
+          <div>Na+, K+, Li+ (Group 1) &rarr; <strong style="color:var(--g4);">1 OH&#8315;</strong></div>
+          <div>Ca2+, Mg2+, Ba2+ (Group 2) &rarr; <strong style="color:var(--g4);">2 OH&#8315;</strong></div>
+          <div>Al3+ (always 3+) &rarr; <strong style="color:var(--g4);">3 OH&#8315;</strong></div>
+          <div>Zn2+ (always 2+) &rarr; <strong style="color:var(--g4);">2 OH&#8315;</strong></div>
+        </div>
+      </div>
+      <table class="ex-table">
+        <tr><th>Name</th><th>Ion / Charge</th><th>Formula</th></tr>
+        <tr><td>potassium hydroxide</td><td>K+ (1+) &rarr; 1 OH&#8315;</td><td class="mono ans">KOH</td></tr>
+        <tr><td>calcium hydroxide</td><td>Ca2+ (2+) &rarr; 2 OH&#8315;</td><td class="mono ans">Ca(OH)&#8322;</td></tr>
+        <tr><td>iron(III) hydroxide</td><td>Fe3+ (III=3+) &rarr; 3 OH&#8315;</td><td class="mono ans">Fe(OH)&#8323;</td></tr>
+        <tr><td>copper(II) hydroxide</td><td>Cu2+ (II=2+) &rarr; 2 OH&#8315;</td><td class="mono ans">Cu(OH)&#8322;</td></tr>
+        <tr><td>aluminum hydroxide</td><td>Al3+ (always 3+) &rarr; 3 OH&#8315;</td><td class="mono ans">Al(OH)&#8323;</td></tr>
+        <tr><td>ammonia</td><td>special case &mdash; memorize</td><td class="mono ans">NH&#8323;</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="play-cta">
+    <button class="play-btn" onclick="go('game')">
+      &#9918; Play the Baseball Game
+    </button>
+    <p style="margin-top:12px;font-size:13px;color:var(--muted);">Answer fast for a home run &mdash; take too long and you'll dribble a single!</p>
+  </div>
+</div>
+</div>
+
+<!-- ============================= GAME SCREEN ============================= -->
+<div class="screen" id="s-game">
+<div class="game-wrap">
+
+  <!-- Scoreboard -->
+  <div class="scoreboard">
+    <div class="sb-section">
+      <div class="sb-label">Inning</div>
+      <div class="inning-dots" id="inning-dots"></div>
+    </div>
+    <div class="sb-section">
+      <div class="sb-label">Score (Runs)</div>
+      <div class="sb-value big" id="sb-runs">0</div>
+    </div>
+    <div class="count-row">
+      <div class="count-item">
+        <span class="count-label">Strikes</span>
+        <div class="strike-dots" id="strike-dots"></div>
+      </div>
+      <div class="count-item">
+        <span class="count-label">Outs</span>
+        <div class="out-dots" id="out-dots"></div>
+      </div>
+    </div>
+    <div class="sb-section">
+      <div class="sb-label">Hits</div>
+      <div class="sb-value green" id="sb-hits">0</div>
+    </div>
+    <div class="sb-section">
+      <div class="sb-label">K's</div>
+      <div class="sb-value red" id="sb-k">0</div>
+    </div>
+  </div>
+
+  <!-- Field Canvas -->
+  <div class="field-wrap">
+    <canvas id="fieldCanvas"></canvas>
+  </div>
+
+  <!-- Question Panel -->
+  <div class="q-panel" id="q-panel">
+    <div class="q-status" id="q-status">Waiting for pitch...</div>
+    <div class="q-prompt" id="q-prompt"></div>
+    <div class="q-given" id="q-given"></div>
+    <div class="q-dir" id="q-dir"></div>
+    <div class="hint-row">
+      <button class="hint-toggle" onclick="toggleHint()">&#128161; Hint</button>
+      <div class="hint-text" id="hint-text"></div>
+    </div>
+    <div class="timer-bar-outer"><div class="timer-bar-fill" id="timer-bar" style="width:100%"></div></div>
+    <div class="ans-row">
+      <input class="ans-input" id="ans-input" placeholder="Type your answer and press ENTER or SWING..." autocomplete="off" spellcheck="false">
+      <button class="swing-btn" id="swing-btn" onclick="handleSwing()">SWING &#9918;</button>
+    </div>
+    <div class="fb-box" id="fb-box"></div>
+  </div>
+
+  <!-- Game Over Panel -->
+  <div class="game-over" id="game-over">
+    <span class="go-icon" id="go-icon">&#9918;</span>
+    <div class="go-title" id="go-title">Game Over!</div>
+    <div class="go-sub" id="go-sub"></div>
+    <div class="go-stats">
+      <div class="go-stat"><span class="go-stat-v" id="go-runs">0</span><span class="go-stat-l">Runs Scored</span></div>
+      <div class="go-stat"><span class="go-stat-v" id="go-hits">0</span><span class="go-stat-l">Total Hits</span></div>
+      <div class="go-stat"><span class="go-stat-v" id="go-hr">0</span><span class="go-stat-l">Home Runs</span></div>
+      <div class="go-stat"><span class="go-stat-v" id="go-k">0</span><span class="go-stat-l">Strikeouts</span></div>
+      <div class="go-stat"><span class="go-stat-v" id="go-pct">0%</span><span class="go-stat-l">Batting Avg</span></div>
+    </div>
+    <div class="missed-wrap" id="missed-wrap"></div>
+    <button class="go-btn" onclick="startGame()">&#9918; Play Again</button>
+    <button class="go-btn sec" onclick="go('review')">&#128214; Back to Review</button>
+  </div>
+
+</div>
+</div>
+
+<script>
+// ======================== NAVIGATION ========================
+function go(name) {
+  ['review','game'].forEach(function(s) {
+    document.getElementById('s-'+s).className = 'screen' + (s===name?' active':'');
+    document.getElementById('tab-'+s).className = 'nav-tab' + (s===name?' active':'');
+  });
+  window.scrollTo(0,0);
+  if (name === 'game' && !gameRunning) startGame();
+}
+
+function toggleAcc(head) {
+  head.classList.toggle('open');
+}
+
+// ======================== QUESTIONS ========================
+var QUESTIONS = [
+  // Binary Acids F->N
+  {tp:'bin',dir:'FN',g:'HF(aq)',a:'hydrofluoric acid',h:'F = fluorine, root = fluor. hydro+fluor+ic+acid'},
+  {tp:'bin',dir:'FN',g:'HCl(aq)',a:'hydrochloric acid',h:'Cl = chlorine, root = chlor. hydro+chlor+ic+acid'},
+  {tp:'bin',dir:'FN',g:'HBr(aq)',a:'hydrobromic acid',h:'Br = bromine, root = brom. hydro+brom+ic+acid'},
+  {tp:'bin',dir:'FN',g:'HI(aq)',a:'hydroiodic acid',h:'I = iodine, root = iod. hydro+iod+ic+acid'},
+  {tp:'bin',dir:'FN',g:'H2S(aq)',a:'hydrosulfuric acid',h:'S = sulfur. H2 because S has charge 2-'},
+  // Binary Acids N->F
+  {tp:'bin',dir:'NF',g:'hydrochloric acid',a:'HCl',h:'Remove hydro- and -ic acid. chlor -> Cl. H + Cl = HCl'},
+  {tp:'bin',dir:'NF',g:'hydrobromic acid',a:'HBr',h:'Remove hydro- and -ic acid. brom -> Br. H + Br = HBr'},
+  {tp:'bin',dir:'NF',g:'hydrofluoric acid',a:'HF',h:'Remove hydro- and -ic acid. fluor -> F. H + F = HF'},
+  {tp:'bin',dir:'NF',g:'hydroiodic acid',a:'HI',h:'Remove hydro- and -ic acid. iod -> I. H + I = HI'},
+  {tp:'bin',dir:'NF',g:'hydrosulfuric acid',a:'H2S',h:'S has charge 2- so need 2 H. Formula = H2S'},
+  // Oxyacids F->N
+  {tp:'oxy',dir:'FN',g:'HNO3',a:'nitric acid',h:'NO3- = nitrate (-ate) -> -ic acid -> nitric acid'},
+  {tp:'oxy',dir:'FN',g:'HNO2',a:'nitrous acid',h:'NO2- = nitrite (-ite) -> -ous acid -> nitrous acid'},
+  {tp:'oxy',dir:'FN',g:'H2SO4',a:'sulfuric acid',h:'SO4(2-) = sulfate (-ate) -> -ic acid -> sulfuric acid'},
+  {tp:'oxy',dir:'FN',g:'H2SO3',a:'sulfurous acid',h:'SO3(2-) = sulfite (-ite) -> -ous acid -> sulfurous acid'},
+  {tp:'oxy',dir:'FN',g:'H3PO4',a:'phosphoric acid',h:'PO4(3-) = phosphate (-ate) -> -ic acid -> phosphoric acid'},
+  {tp:'oxy',dir:'FN',g:'H2CO3',a:'carbonic acid',h:'CO3(2-) = carbonate (-ate) -> -ic acid -> carbonic acid'},
+  {tp:'oxy',dir:'FN',g:'HClO4',a:'perchloric acid',h:'ClO4- = perchlorate. per-+-ate -> per-+-ic -> perchloric acid'},
+  {tp:'oxy',dir:'FN',g:'HClO3',a:'chloric acid',h:'ClO3- = chlorate (-ate) -> -ic acid -> chloric acid'},
+  {tp:'oxy',dir:'FN',g:'HClO2',a:'chlorous acid',h:'ClO2- = chlorite (-ite) -> -ous acid -> chlorous acid'},
+  {tp:'oxy',dir:'FN',g:'HClO',a:'hypochlorous acid',h:'ClO- = hypochlorite. hypo-+-ite -> hypo-+-ous -> hypochlorous acid'},
+  // Oxyacids N->F
+  {tp:'oxy',dir:'NF',g:'nitrous acid',a:'HNO2',h:'-ous -> nitrite NO2- (charge 1-) -> 1H -> HNO2'},
+  {tp:'oxy',dir:'NF',g:'sulfuric acid',a:'H2SO4',h:'-ic -> sulfate SO4(2-) -> charge 2- -> 2H -> H2SO4'},
+  {tp:'oxy',dir:'NF',g:'phosphoric acid',a:'H3PO4',h:'-ic -> phosphate PO4(3-) -> charge 3- -> 3H -> H3PO4'},
+  {tp:'oxy',dir:'NF',g:'carbonic acid',a:'H2CO3',h:'-ic -> carbonate CO3(2-) -> charge 2- -> 2H -> H2CO3'},
+  {tp:'oxy',dir:'NF',g:'perchloric acid',a:'HClO4',h:'per-+-ic -> perchlorate ClO4- -> charge 1- -> 1H -> HClO4'},
+  {tp:'oxy',dir:'NF',g:'hypochlorous acid',a:'HClO',h:'hypo-+-ous -> hypochlorite ClO- -> charge 1- -> 1H -> HClO'},
+  {tp:'oxy',dir:'NF',g:'nitric acid',a:'HNO3',h:'-ic -> nitrate NO3- -> charge 1- -> 1H -> HNO3'},
+  {tp:'oxy',dir:'NF',g:'sulfurous acid',a:'H2SO3',h:'-ous -> sulfite SO3(2-) -> charge 2- -> 2H -> H2SO3'},
+  // Bases F->N
+  {tp:'base',dir:'FN',g:'NaOH',a:'sodium hydroxide',h:'Na = sodium, Group 1 fixed 1+. sodium + hydroxide'},
+  {tp:'base',dir:'FN',g:'KOH',a:'potassium hydroxide',h:'K = potassium, Group 1 fixed 1+. potassium + hydroxide'},
+  {tp:'base',dir:'FN',g:'Ca(OH)2',a:'calcium hydroxide',h:'Ca = calcium, Group 2 fixed 2+. calcium + hydroxide'},
+  {tp:'base',dir:'FN',g:'Mg(OH)2',a:'magnesium hydroxide',h:'Mg = magnesium, Group 2 fixed 2+. magnesium + hydroxide'},
+  {tp:'base',dir:'FN',g:'Al(OH)3',a:'aluminum hydroxide',h:'Al = aluminum, always 3+. aluminum + hydroxide'},
+  {tp:'base',dir:'FN',g:'Fe(OH)2',a:'iron(II) hydroxide',h:'Fe with 2 OH- means Fe2+. iron(II) + hydroxide'},
+  {tp:'base',dir:'FN',g:'Fe(OH)3',a:'iron(III) hydroxide',h:'Fe with 3 OH- means Fe3+. iron(III) + hydroxide'},
+  {tp:'base',dir:'FN',g:'Cu(OH)2',a:'copper(II) hydroxide',h:'Cu with 2 OH- means Cu2+. copper(II) + hydroxide'},
+  {tp:'base',dir:'FN',g:'Ba(OH)2',a:'barium hydroxide',h:'Ba = barium, Group 2 fixed 2+. barium + hydroxide'},
+  {tp:'base',dir:'FN',g:'NH3',a:'ammonia',h:'NH3 = ammonia. Special case - memorize this one!'},
+  // Bases N->F
+  {tp:'base',dir:'NF',g:'sodium hydroxide',a:'NaOH',h:'Na+ has charge 1+. Need 1 OH-. Formula = NaOH'},
+  {tp:'base',dir:'NF',g:'calcium hydroxide',a:'Ca(OH)2',h:'Ca2+ has charge 2+. Need 2 OH-. Formula = Ca(OH)2'},
+  {tp:'base',dir:'NF',g:'potassium hydroxide',a:'KOH',h:'K+ has charge 1+. Need 1 OH-. Formula = KOH'},
+  {tp:'base',dir:'NF',g:'iron(III) hydroxide',a:'Fe(OH)3',h:'(III) = 3+. Need 3 OH-. Formula = Fe(OH)3'},
+  {tp:'base',dir:'NF',g:'aluminum hydroxide',a:'Al(OH)3',h:'Al always 3+. Need 3 OH-. Formula = Al(OH)3'},
+  {tp:'base',dir:'NF',g:'copper(II) hydroxide',a:'Cu(OH)2',h:'(II) = 2+. Need 2 OH-. Formula = Cu(OH)2'},
+  {tp:'base',dir:'NF',g:'magnesium hydroxide',a:'Mg(OH)2',h:'Mg2+ always 2+. Need 2 OH-. Formula = Mg(OH)2'},
+  {tp:'base',dir:'NF',g:'iron(II) hydroxide',a:'Fe(OH)2',h:'(II) = 2+. Need 2 OH-. Formula = Fe(OH)2'},
+  {tp:'base',dir:'NF',g:'ammonia',a:'NH3',h:'Ammonia is a special case. Formula = NH3'},
+];
+
+function shuffle(arr) {
+  var a = arr.slice();
+  for (var i = a.length-1; i > 0; i--) {
+    var j = Math.floor(Math.random()*(i+1));
+    var t = a[i]; a[i] = a[j]; a[j] = t;
+  }
+  return a;
+}
+
+function normAns(s) {
+  return s.trim().toLowerCase().replace(/\(aq\)/g,'').replace(/\s+/g,' ').trim();
+}
+
+function isCorrect(user, correct) {
+  var u = normAns(user);
+  var c = normAns(correct);
+  return u === c;
+}
+
+// ======================== GAME STATE ========================
+var gameRunning = false;
+var innings = 3;
+var outs = 0;
+var strikes = 0;
+var runs = 0;
+var totalHits = 0;
+var totalHR = 0;
+var totalK = 0;
+var totalAtBats = 0;
+var currentInning = 1;
+var bases = [false, false, false]; // 1st, 2nd, 3rd
+var qPool = [];
+var currentQ = null;
+var qAnswered = false;
+var qTimer = null;
+var qTimeLeft = 0;
+var Q_TIME = 25;
+var missedItems = [];
+var pitchAnimId = null;
+var ballAnimId = null;
+var phase = 'waiting'; // waiting, pitching, answering, result, nextpitch, gameover
+
+// Canvas
+var canvas, ctx, CW, CH;
+
+function initCanvas() {
+  canvas = document.getElementById('fieldCanvas');
+  // Responsive: match display width
+  CW = canvas.offsetWidth || 860;
+  CH = Math.round(CW * 0.52);
+  canvas.width = CW;
+  canvas.height = CH;
+  ctx = canvas.getContext('2d');
+}
+
+// Ball state
+var ball = {x:0,y:0,vx:0,vy:0,r:8,visible:false};
+var batSwung = false;
+var hitType = ''; // 'HR','3B','2B','1B','out'
+var hitPower = 0;
+var ballTrail = [];
+
+// Announcement overlay
+var announcement = {text:'',sub:'',alpha:0,color:'#FFDF60',timer:0};
+
+function setAnnouncement(text, sub, color, duration) {
+  announcement.text = text;
+  announcement.sub = sub || '';
+  announcement.color = color || '#FFDF60';
+  announcement.alpha = 1;
+  announcement.timer = duration || 120;
+}
+
+// Pitcher state
+var pitcher = {x:0,y:0,armAngle:0,throwing:false};
+// Batter state
+var batter = {x:0,y:0,swinging:false,swingAngle:0};
+
+function startGame() {
+  gameRunning = true;
+  outs = 0; strikes = 0; runs = 0; totalHits = 0; totalHR = 0; totalK = 0; totalAtBats = 0;
+  currentInning = 1;
+  bases = [false, false, false];
+  qPool = shuffle(QUESTIONS);
+  missedItems = [];
+  phase = 'waiting';
+  batSwung = false;
+  announcement = {text:'',sub:'',alpha:0,color:'#FFDF60',timer:0};
+
+  document.getElementById('game-over').style.display = 'none';
+  document.getElementById('q-panel').style.display = 'block';
+  document.getElementById('fb-box').className = 'fb-box';
+
+  initCanvas();
+  updateScoreboard();
+  startMainLoop();
+  setTimeout(startNewPitch, 800);
+}
+
+var mainLoopId = null;
+function startMainLoop() {
+  if (mainLoopId) cancelAnimationFrame(mainLoopId);
+  function loop() {
+    drawField();
+    mainLoopId = requestAnimationFrame(loop);
+  }
+  loop();
+}
+
+function startNewPitch() {
+  if (phase === 'gameover') return;
+  phase = 'pitching';
+  qAnswered = false;
+  batSwung = false;
+  ballTrail = [];
+
+  // Pick question
+  if (qPool.length === 0) qPool = shuffle(QUESTIONS);
+  currentQ = qPool.pop();
+
+  // Reset UI
+  var inp = document.getElementById('ans-input');
+  inp.value = '';
+  inp.className = 'ans-input';
+  inp.disabled = true;
+  document.getElementById('swing-btn').disabled = true;
+  document.getElementById('swing-btn').className = 'swing-btn';
+  document.getElementById('swing-btn').textContent = 'SWING \u26BE';
+  document.getElementById('fb-box').className = 'fb-box';
+  document.getElementById('hint-text').className = 'hint-text';
+  document.getElementById('q-status').textContent = 'Pitch incoming...';
+  document.getElementById('q-prompt').textContent = '';
+  document.getElementById('q-given').textContent = '';
+  document.getElementById('q-dir').textContent = '';
+  document.getElementById('hint-text').textContent = '';
+  document.getElementById('timer-bar').style.width = '100%';
+  document.getElementById('timer-bar').style.background = 'var(--g5)';
+
+  // Animate pitch
+  pitcher.throwing = true;
+  ball.visible = true;
+  ball.x = CW * 0.5;
+  ball.y = CH * 0.3;
+  var targetX = CW * 0.87;
+  var targetY = CH * 0.82;
+  var dx = targetX - ball.x;
+  var dy = targetY - ball.y;
+  var frames = 55;
+  ball.vx = dx / frames;
+  ball.vy = dy / frames;
+  ball.r = 5;
+
+  var f = 0;
+  function pitchStep() {
+    ball.x += ball.vx;
+    ball.y += ball.vy;
+    ball.r = 5 + (f / frames) * 5;
+    ballTrail.push({x:ball.x, y:ball.y, r:ball.r});
+    if (ballTrail.length > 12) ballTrail.shift();
+    f++;
+    if (f >= frames) {
+      pitcher.throwing = false;
+      ball.visible = false;
+      showQuestion();
+    } else {
+      pitchAnimId = requestAnimationFrame(pitchStep);
+    }
+  }
+  pitchAnimId = requestAnimationFrame(pitchStep);
+}
+
+function showQuestion() {
+  phase = 'answering';
+  ballTrail = [];
+  var q = currentQ;
+  var isFN = (q.dir === 'FN');
+  document.getElementById('q-status').textContent = (q.tp==='bin'?'BINARY ACID':q.tp==='oxy'?'OXYACID':'BASE') + ' \u2014 ' + (isFN ? 'FORMULA to NAME' : 'NAME to FORMULA');
+  document.getElementById('q-prompt').textContent = isFN ? 'Write the name for:' : 'Write the formula for:';
+  document.getElementById('q-given').textContent = q.g;
+  document.getElementById('q-dir').textContent = isFN ? '-> Write the name' : '-> Write the formula';
+  document.getElementById('hint-text').textContent = q.h;
+  var inp = document.getElementById('ans-input');
+  inp.disabled = false;
+  inp.placeholder = isFN ? 'Type the name here...' : 'Type the formula here...';
+  inp.focus();
+  document.getElementById('swing-btn').disabled = false;
+
+  qTimeLeft = Q_TIME;
+  var startTime = Date.now();
+  clearInterval(qTimer);
+  qTimer = setInterval(function() {
+    var elapsed = (Date.now() - startTime) / 1000;
+    qTimeLeft = Math.max(0, Q_TIME - elapsed);
+    var pct = qTimeLeft / Q_TIME;
+    var bar = document.getElementById('timer-bar');
+    bar.style.width = (pct * 100) + '%';
+    bar.style.background = pct > 0.5 ? 'var(--g5)' : pct > 0.25 ? 'var(--amber)' : 'var(--coral)';
+    if (qTimeLeft <= 0) {
+      clearInterval(qTimer);
+      if (!qAnswered) strikeout(true);
+    }
+  }, 50);
+}
+
+function handleSwing() {
+  if (phase !== 'answering' || qAnswered) {
+    if (phase === 'result') nextPitch();
+    return;
+  }
+  var inp = document.getElementById('ans-input');
+  if (!inp.value.trim()) { inp.focus(); return; }
+  clearInterval(qTimer);
+  qAnswered = true;
+
+  var timeUsed = Q_TIME - qTimeLeft;
+  var correct = isCorrect(inp.value, currentQ.a);
+  totalAtBats++;
+
+  if (correct) {
+    // Power = how fast they answered (0-1, 1=instant)
+    var power = Math.max(0, Math.min(1, 1 - (timeUsed / Q_TIME)));
+    var type;
+    if (power >= 0.80) type = 'HR';
+    else if (power >= 0.55) type = 'triple';
+    else if (power >= 0.30) type = 'double';
+    else type = 'single';
+    doHit(type, inp.value);
+  } else {
+    missedItems.push(currentQ);
+    strikeout(false);
+  }
+}
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Enter' && phase === 'answering' && !qAnswered) {
+    handleSwing();
+  } else if (e.key === 'Enter' && phase === 'result') {
+    nextPitch();
+  }
+});
+
+function doHit(type, userAns) {
+  phase = 'result';
+  totalHits++;
+  batSwung = true;
+
+  var labels = {HR:'HOME RUN! \uD83D\uDCA5\uD83D\uDCA5', triple:'TRIPLE! \uD83D\uDD25', double:'DOUBLE! \uD83D\uDC4F', single:'SINGLE!'};
+  var colors = {HR:'#FFDF60', triple:'#ff9040', double:'#60D0FF', single:'#9FECD1'};
+  var subs = {HR:'You crushed it! Fastest answer = farthest hit!', triple:'Scorching line drive!', double:'Into the gap!', single:'Dribbler gets you on base!'};
+
+  document.getElementById('ans-input').className = 'ans-input ok';
+  document.getElementById('ans-input').disabled = true;
+
+  var fb = document.getElementById('fb-box');
+  fb.className = 'fb-box ok show';
+  fb.innerHTML = '<strong>' + labels[type] + '</strong> Correct! <span class="fb-ans">' + currentQ.a + '</span><br><span style="font-size:12px;opacity:.8;">'+subs[type]+' &mdash; Press Enter for next pitch</span>';
+
+  setAnnouncement(labels[type], subs[type], colors[type], 150);
+
+  // Animate ball flying
+  ball.visible = true;
+  ball.x = CW * 0.87;
+  ball.y = CH * 0.82;
+  ballTrail = [];
+  var angles = {HR:-1.2, triple:-1.0, double:-0.85, single:-0.7};
+  var speeds = {HR:22, triple:18, double:15, single:11};
+  var ang = angles[type];
+  ball.vx = Math.cos(ang) * speeds[type] * -1;
+  ball.vy = Math.sin(ang) * speeds[type];
+  var gravity = 0.4;
+  var bouncedOnce = false;
+
+  // Advance bases
+  var adv = {HR:4, triple:3, double:2, single:1};
+  var advance = adv[type];
+
+  // Count runs before advancing
+  var newRuns = 0;
+  var newBases = [false, false, false];
+
+  if (type === 'HR') {
+    // Everyone scores
+    for (var i = 0; i < 3; i++) if (bases[i]) newRuns++;
+    newRuns++; // batter scores too
+    totalHR++;
+  } else {
+    // Advance runners
+    for (var i = 2; i >= 0; i--) {
+      if (bases[i]) {
+        var newPos = i + advance;
+        if (newPos >= 3) newRuns++;
+        else newBases[newPos] = true;
+      }
+    }
+    // Batter
+    var bp = advance - 1;
+    if (bp >= 3) newRuns++;
+    else newBases[bp] = true;
+  }
+  bases = newBases;
+  runs += newRuns;
+
+  updateScoreboard();
+
+  // Ball flight animation
+  function hitBallStep() {
+    ball.vx *= 0.985;
+    ball.vy += gravity;
+    ball.x += ball.vx;
+    ball.y += ball.vy;
+    ballTrail.push({x:ball.x, y:ball.y, r:ball.r});
+    if (ballTrail.length > 18) ballTrail.shift();
+    if (ball.y > CH + 20 || ball.x < -50 || ball.x > CW + 50) {
+      ball.visible = false;
+      ballTrail = [];
+    } else {
+      ballAnimId = requestAnimationFrame(hitBallStep);
+    }
+  }
+  ballAnimId = requestAnimationFrame(hitBallStep);
+
+  // Setup next pitch button
+  document.getElementById('swing-btn').className = 'swing-btn next-pitch';
+  document.getElementById('swing-btn').textContent = 'Next Pitch \u2192';
+  document.getElementById('swing-btn').onclick = function() { nextPitch(); };
+}
+
+function strikeout(timeout) {
+  phase = 'result';
+  batSwung = false;
+  strikes++;
+
+  document.getElementById('ans-input').className = 'ans-input bad';
+  document.getElementById('ans-input').disabled = true;
+
+  var fb = document.getElementById('fb-box');
+  fb.className = 'fb-box bad show';
+
+  var msg = timeout ? 'Time ran out! ' : 'Strike! ';
+  fb.innerHTML = '<strong>' + msg + (strikes < 3 ? 'Strike ' + strikes + '!' : 'STRIKEOUT! K') + '</strong><br>Answer: <span class="fb-ans">' + currentQ.a + '</span><br><span style="font-size:12px;opacity:.8;">Hint: ' + currentQ.h + ' &mdash; Press Enter for next pitch</span>';
+
+  if (strikes >= 3) {
+    setAnnouncement('STRIKEOUT!', 'K - Three strikes, you are out!', '#ff6060', 160);
+    strikes = 0;
+    outs++;
+    totalK++;
+    updateScoreboard();
+    if (outs >= 3) {
+      // Inning over
+      setTimeout(function() {
+        if (currentInning >= innings) {
+          endGame();
+        } else {
+          currentInning++;
+          outs = 0;
+          strikes = 0;
+          bases = [false, false, false];
+          updateScoreboard();
+          setAnnouncement('INNING ' + currentInning, 'New inning begins!', '#60D0FF', 150);
+          setTimeout(startNewPitch, 2000);
+        }
+      }, 1200);
+      return;
+    }
+  } else {
+    setAnnouncement('STRIKE ' + strikes + '!', timeout ? 'Faster next time!' : 'Swung and missed!', '#ff9060', 100);
+  }
+
+  updateScoreboard();
+
+  document.getElementById('swing-btn').className = 'swing-btn next-pitch';
+  document.getElementById('swing-btn').textContent = 'Next Pitch \u2192';
+  document.getElementById('swing-btn').onclick = function() { nextPitch(); };
+}
+
+function nextPitch() {
+  if (phase === 'gameover') return;
+  document.getElementById('swing-btn').onclick = function() { handleSwing(); };
+  startNewPitch();
+}
+
+function endGame() {
+  phase = 'gameover';
+  gameRunning = false;
+  cancelAnimationFrame(mainLoopId);
+  clearInterval(qTimer);
+
+  document.getElementById('q-panel').style.display = 'none';
+
+  var go = document.getElementById('game-over');
+  go.style.display = 'block';
+
+  var pct = totalAtBats > 0 ? Math.round(totalHits / totalAtBats * 1000) : 0;
+  var avgStr = (pct < 100 ? '.' : '') + (pct < 10 ? '0' : '') + pct;
+  if (pct === 1000) avgStr = '1.000';
+
+  var icons = runs >= 10 ? '\uD83C\uDFC6' : runs >= 6 ? '\uD83C\uDF89' : runs >= 3 ? '\u26BE' : '\uD83E\uDDF4';
+  document.getElementById('go-icon').textContent = icons;
+
+  var titles = runs >= 10 ? 'Chemistry All-Star!' : runs >= 6 ? 'Great Game!' : runs >= 3 ? 'Solid Effort!' : 'Keep Practicing!';
+  document.getElementById('go-title').textContent = titles;
+
+  var subs = {
+    10: 'You destroyed it. Chemistry + baseball = unstoppable.',
+    6:  'You know your acid and base naming. Nice work!',
+    3:  'Getting there. Review any rules you missed and try again.',
+    0:  'Head back to the Review section and try again. You got this!'
+  };
+  var sub = subs[0];
+  if (runs >= 10) sub = subs[10];
+  else if (runs >= 6) sub = subs[6];
+  else if (runs >= 3) sub = subs[3];
+  document.getElementById('go-sub').textContent = sub;
+
+  document.getElementById('go-runs').textContent = runs;
+  document.getElementById('go-hits').textContent = totalHits;
+  document.getElementById('go-hr').textContent = totalHR;
+  document.getElementById('go-k').textContent = totalK;
+  document.getElementById('go-pct').textContent = avgStr;
+
+  var mw = document.getElementById('missed-wrap');
+  if (missedItems.length > 0) {
+    var html = '<div class="missed-title">Review these \u2014 you missed them:</div>';
+    var shown = missedItems.length > 8 ? missedItems.slice(0,8) : missedItems;
+    for (var i = 0; i < shown.length; i++) {
+      html += '<div class="mi"><span class="mi-g">'+shown[i].g+'</span><span class="mi-a">'+shown[i].a+'</span></div>';
+    }
+    if (missedItems.length > 8) html += '<div style="font-size:12px;color:rgba(255,255,255,.5);margin-top:6px;">...and '+(missedItems.length-8)+' more. Head to Review!</div>';
+    mw.innerHTML = html;
+  } else {
+    mw.innerHTML = '<div style="text-align:center;color:var(--g4);font-weight:800;font-size:15px;padding:16px 0;">Zero missed answers! Perfect game! \uD83D\uDD25</div>';
+  }
+
+  gameRunning = false;
+}
+
+function updateScoreboard() {
+  document.getElementById('sb-runs').textContent = runs;
+  document.getElementById('sb-hits').textContent = totalHits;
+  document.getElementById('sb-k').textContent = totalK;
+
+  // Inning dots
+  var dots = '';
+  for (var i = 1; i <= innings; i++) {
+    var cls = i < currentInning ? 'i-dot done' : i === currentInning ? 'i-dot current' : 'i-dot';
+    dots += '<div class="'+cls+'"></div>';
+  }
+  document.getElementById('inning-dots').innerHTML = dots;
+
+  // Strike dots
+  var sd = '';
+  for (var i = 0; i < 3; i++) sd += '<div class="s-dot'+(i<strikes?' filled':'')+'"></div>';
+  document.getElementById('strike-dots').innerHTML = sd;
+
+  // Out dots
+  var od = '';
+  for (var i = 0; i < 3; i++) od += '<div class="o-dot'+(i<outs?' filled':'')+'"></div>';
+  document.getElementById('out-dots').innerHTML = od;
+}
+
+function toggleHint() {
+  var h = document.getElementById('hint-text');
+  h.className = h.className.indexOf('open') >= 0 ? 'hint-text' : 'hint-text open';
+}
+
+// ======================== CANVAS DRAWING ========================
+function drawField() {
+  if (!ctx) return;
+  CW = canvas.width; CH = canvas.height;
+
+  // Sky gradient background
+  var skyGrad = ctx.createLinearGradient(0, 0, 0, CH*0.55);
+  skyGrad.addColorStop(0, '#0a1628');
+  skyGrad.addColorStop(1, '#1a3050');
+  ctx.fillStyle = skyGrad;
+  ctx.fillRect(0, 0, CW, CH);
+
+  // Stars
+  ctx.fillStyle = 'rgba(255,255,255,0.6)';
+  var starSeed = 42;
+  for (var i = 0; i < 40; i++) {
+    starSeed = (starSeed * 1664525 + 1013904223) & 0xffffffff;
+    var sx = ((starSeed >>> 0) % CW);
+    starSeed = (starSeed * 1664525 + 1013904223) & 0xffffffff;
+    var sy = ((starSeed >>> 0) % (CH * 0.45));
+    ctx.fillRect(sx, sy, 1.5, 1.5);
+  }
+
+  // Outfield grass
+  var grassGrad = ctx.createRadialGradient(CW*0.5, CH*0.55, CH*0.05, CW*0.5, CH*0.55, CH*0.8);
+  grassGrad.addColorStop(0, '#3a7020');
+  grassGrad.addColorStop(0.5, '#2d5a1b');
+  grassGrad.addColorStop(1, '#1e3d10');
+  ctx.fillStyle = grassGrad;
+  ctx.beginPath();
+  ctx.moveTo(0, CH*0.55);
+  ctx.lineTo(CW, CH*0.55);
+  ctx.lineTo(CW, CH);
+  ctx.lineTo(0, CH);
+  ctx.closePath();
+  ctx.fill();
+
+  // Mowing pattern lines on grass
+  ctx.strokeStyle = 'rgba(0,0,0,0.08)';
+  ctx.lineWidth = 1;
+  for (var i = 0; i < 8; i++) {
+    var y1 = CH*0.55 + (CH*0.45/8)*i;
+    var y2 = CH*0.55 + (CH*0.45/8)*(i+1);
+    if (i%2===0) {
+      ctx.fillStyle = 'rgba(0,0,0,0.05)';
+      ctx.fillRect(0, y1, CW, y2-y1);
+    }
+  }
+
+  // Infield dirt circle
+  var dirtGrad = ctx.createRadialGradient(CW*0.5, CH*0.78, 0, CW*0.5, CH*0.78, CH*0.28);
+  dirtGrad.addColorStop(0, '#a07040');
+  dirtGrad.addColorStop(0.7, '#8B5E3C');
+  dirtGrad.addColorStop(1, '#5a3520');
+  ctx.fillStyle = dirtGrad;
+  ctx.beginPath();
+  ctx.ellipse(CW*0.5, CH*0.78, CH*0.3, CH*0.22, 0, 0, Math.PI*2);
+  ctx.fill();
+
+  // Pitcher's mound
+  ctx.fillStyle = '#9a6840';
+  ctx.beginPath();
+  ctx.ellipse(CW*0.5, CH*0.62, CW*0.04, CH*0.025, 0, 0, Math.PI*2);
+  ctx.fill();
+
+  // Foul lines
+  ctx.strokeStyle = 'rgba(255,255,255,0.5)';
+  ctx.lineWidth = 2;
+  ctx.beginPath();
+  ctx.moveTo(CW*0.5, CH*0.56);
+  ctx.lineTo(CW*0.05, CH*0.98);
+  ctx.stroke();
+  ctx.beginPath();
+  ctx.moveTo(CW*0.5, CH*0.56);
+  ctx.lineTo(CW*0.95, CH*0.98);
+  ctx.stroke();
+
+  // Home plate
+  var hx = CW*0.87, hy = CH*0.88;
+  ctx.fillStyle = '#fff';
+  ctx.beginPath();
+  ctx.moveTo(hx, hy-10);
+  ctx.lineTo(hx+8, hy);
+  ctx.lineTo(hx+6, hy+8);
+  ctx.lineTo(hx-6, hy+8);
+  ctx.lineTo(hx-8, hy);
+  ctx.closePath();
+  ctx.fill();
+
+  // Diamond bases (1st, 2nd, 3rd)
+  var basePositions = [
+    {x: CW*0.69, y: CH*0.72},  // 1st
+    {x: CW*0.5,  y: CH*0.55},  // 2nd
+    {x: CW*0.31, y: CH*0.72},  // 3rd
+  ];
+  basePositions.forEach(function(bp, i) {
+    // Base occupied glow
+    if (bases[i]) {
+      ctx.fillStyle = 'rgba(255,220,60,0.3)';
+      ctx.beginPath();
+      ctx.arc(bp.x, bp.y, 18, 0, Math.PI*2);
+      ctx.fill();
+    }
+    // Base square
+    ctx.save();
+    ctx.translate(bp.x, bp.y);
+    ctx.rotate(Math.PI/4);
+    ctx.fillStyle = bases[i] ? '#FFDF60' : '#f0e0a0';
+    ctx.strokeStyle = '#8B5E3C';
+    ctx.lineWidth = 1.5;
+    ctx.fillRect(-8, -8, 16, 16);
+    ctx.strokeRect(-8, -8, 16, 16);
+    ctx.restore();
+
+    // Runner on base
+    if (bases[i]) {
+      ctx.fillStyle = '#FFDF60';
+      ctx.beginPath();
+      ctx.arc(bp.x, bp.y - 20, 7, 0, Math.PI*2);
+      ctx.fill();
+      ctx.fillStyle = '#c07000';
+      // body
+      ctx.fillRect(bp.x - 4, bp.y - 13, 8, 10);
+    }
+  });
+
+  // Base paths
+  ctx.strokeStyle = 'rgba(255,255,255,0.15)';
+  ctx.lineWidth = 1.5;
+  ctx.setLineDash([4,4]);
+  ctx.beginPath();
+  ctx.moveTo(hx, hy);
+  ctx.lineTo(basePositions[0].x, basePositions[0].y);
+  ctx.lineTo(basePositions[1].x, basePositions[1].y);
+  ctx.lineTo(basePositions[2].x, basePositions[2].y);
+  ctx.lineTo(hx, hy);
+  ctx.stroke();
+  ctx.setLineDash([]);
+
+  // Pitcher (stick figure)
+  var px = CW*0.5, py = CH*0.58;
+  pitcher.x = px; pitcher.y = py;
+  ctx.strokeStyle = '#fff';
+  ctx.lineWidth = 2.5;
+  ctx.lineCap = 'round';
+  // Head
+  ctx.fillStyle = '#ffd0a0';
+  ctx.beginPath();
+  ctx.arc(px, py-14, 7, 0, Math.PI*2);
+  ctx.fill();
+  // Body
+  ctx.beginPath();
+  ctx.moveTo(px, py-7);
+  ctx.lineTo(px, py+10);
+  ctx.stroke();
+  // Legs
+  ctx.beginPath();
+  ctx.moveTo(px, py+10);
+  ctx.lineTo(px-8, py+22);
+  ctx.moveTo(px, py+10);
+  ctx.lineTo(px+8, py+22);
+  ctx.stroke();
+  // Arm (throwing)
+  var armAng = pitcher.throwing ? -Math.PI*0.7 : -Math.PI*0.3;
+  ctx.beginPath();
+  ctx.moveTo(px, py);
+  ctx.lineTo(px + Math.cos(armAng)*14, py + Math.sin(armAng)*14);
+  ctx.stroke();
+  ctx.beginPath();
+  ctx.moveTo(px, py);
+  ctx.lineTo(px - 10, py+6);
+  ctx.stroke();
+
+  // Batter (stick figure at home plate)
+  var bx = hx - 22, by = hy - 10;
+  batter.x = bx; batter.y = by;
+  ctx.fillStyle = '#ffd0a0';
+  ctx.beginPath();
+  ctx.arc(bx, by-16, 7, 0, Math.PI*2);
+  ctx.fill();
+  ctx.strokeStyle = '#4488ff';
+  ctx.lineWidth = 2.5;
+  ctx.beginPath();
+  ctx.moveTo(bx, by-9);
+  ctx.lineTo(bx, by+10);
+  ctx.stroke();
+  ctx.beginPath();
+  ctx.moveTo(bx, by+10);
+  ctx.lineTo(bx-8, by+22);
+  ctx.moveTo(bx, by+10);
+  ctx.lineTo(bx+8, by+22);
+  ctx.stroke();
+
+  // Bat
+  var batAng = batSwung ? -2.0 : -0.5;
+  ctx.strokeStyle = '#c08040';
+  ctx.lineWidth = 3;
+  ctx.beginPath();
+  ctx.moveTo(bx, by);
+  ctx.lineTo(bx + Math.cos(batAng)*32, by + Math.sin(batAng)*32);
+  ctx.stroke();
+  // Arms holding bat
+  ctx.strokeStyle = '#4488ff';
+  ctx.lineWidth = 2;
+  ctx.beginPath();
+  ctx.moveTo(bx, by-2);
+  ctx.lineTo(bx + Math.cos(batAng)*18, by + Math.sin(batAng)*18);
+  ctx.stroke();
+
+  // Ball trail
+  for (var t = 0; t < ballTrail.length; t++) {
+    var tr = ballTrail[t];
+    var alpha = t / ballTrail.length * 0.4;
+    ctx.fillStyle = 'rgba(255,255,200,' + alpha + ')';
+    ctx.beginPath();
+    ctx.arc(tr.x, tr.y, tr.r * 0.6, 0, Math.PI*2);
+    ctx.fill();
+  }
+
+  // Ball
+  if (ball.visible) {
+    // Seams
+    ctx.fillStyle = '#f8f0e0';
+    ctx.beginPath();
+    ctx.arc(ball.x, ball.y, ball.r, 0, Math.PI*2);
+    ctx.fill();
+    ctx.strokeStyle = '#cc2020';
+    ctx.lineWidth = 1;
+    ctx.beginPath();
+    ctx.arc(ball.x, ball.y, ball.r*0.7, 0.3, 1.5);
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.arc(ball.x, ball.y, ball.r*0.7, Math.PI+0.3, Math.PI+1.5);
+    ctx.stroke();
+  }
+
+  // Announcement overlay
+  if (announcement.alpha > 0) {
+    ctx.save();
+    ctx.globalAlpha = Math.min(1, announcement.alpha);
+    // Background
+    ctx.fillStyle = 'rgba(0,0,0,0.6)';
+    ctx.beginPath();
+    ctx.roundRect ? ctx.roundRect(CW*0.1, CH*0.28, CW*0.8, CH*0.25, 12) : ctx.rect(CW*0.1, CH*0.28, CW*0.8, CH*0.25);
+    ctx.fill();
+    // Main text
+    ctx.fillStyle = announcement.color;
+    ctx.font = 'bold ' + Math.round(CH*0.1) + 'px "Segoe UI", sans-serif';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.fillText(announcement.text, CW*0.5, CH*0.37);
+    // Sub text
+    if (announcement.sub) {
+      ctx.fillStyle = 'rgba(255,255,255,0.8)';
+      ctx.font = Math.round(CH*0.04) + 'px "Segoe UI", sans-serif';
+      ctx.fillText(announcement.sub, CW*0.5, CH*0.46);
+    }
+    ctx.restore();
+    announcement.timer--;
+    if (announcement.timer <= 0) {
+      announcement.alpha = Math.max(0, announcement.alpha - 0.04);
+    }
+  }
+
+  // Inning / outs overlay in field
+  ctx.fillStyle = 'rgba(255,255,255,0.7)';
+  ctx.font = 'bold ' + Math.round(CH*0.04) + 'px "Courier New", monospace';
+  ctx.textAlign = 'left';
+  ctx.textBaseline = 'top';
+  ctx.fillText('INN ' + currentInning + '/' + innings + '  OUTS ' + outs + '/3', CW*0.02, CH*0.03);
+}
+
+// Resize handler
+window.addEventListener('resize', function() {
+  if (document.getElementById('s-game').className.indexOf('active') >= 0) {
+    var oldW = CW;
+    CW = canvas.offsetWidth;
+    CH = Math.round(CW * 0.52);
+    canvas.width = CW;
+    canvas.height = CH;
+    // Scale ball position proportionally
+    if (ball.x) { ball.x = ball.x / oldW * CW; }
+  }
+});
+
+// Initialize on load
+initCanvas();
+updateScoreboard();
+drawField();
+</script>
+</body>
+</html>
